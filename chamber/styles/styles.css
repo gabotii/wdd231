@@ -73,7 +73,7 @@ body {
   }
   
   .hero-container {
-    position: revert;
+    position: relative;
     width: 100%;
   }
   
@@ -84,15 +84,21 @@ body {
   }
   
   .hero-button {
-    position: revert;
-    bottom: 10px;
-    right: 10%;
+    position: absolute;
+    bottom: 20px; /* Ajusta según sea necesario */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%);
     background-color: #0056B3;
-    border: none;
-    padding: 10px 20px;
     color: #fff;
+    padding: 10px 75px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
-  }
+    transition: background-color 0.3s, transform 0.3s;
+}
   
   .hero-button:hover {
     background-color: #004494;
@@ -105,7 +111,7 @@ body {
   
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
   }
   
@@ -388,8 +394,13 @@ body {
     }
   
     .hero-button {
-      right: 50%;
-      transform: translateX(50%);
+      position: absolute;
+      top: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     /* For mobile, toggle between list and grid view */
