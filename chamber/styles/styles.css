@@ -85,8 +85,8 @@ body {
   
   .hero-button {
     position: absolute;
-    bottom: auto; /* Ajusta según sea necesario */
-    left: 50%; /* Centra horizontalmente */
+    bottom: auto; 
+    left: 50%; 
     transform: translateX(-50%);
     background-color: #0056B3;
     color: #fff;
@@ -395,8 +395,8 @@ body {
   
     .hero-button {
     position: absolute;
-    bottom: auto; /* Ajusta según sea necesario */
-    left: 50%; /* Centra horizontalmente */
+    bottom: auto; 
+    left: 50%; 
     transform: translateX(-50%);
     background-color: #0056B3;
     color: #fff;
