@@ -217,3 +217,65 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call the function to generate the spotlight members
     generateSpotlightMembers();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Parse URL parameters
+    const params = new URLSearchParams(window.location.search);
+
+    // Get elements by their IDs and set their text content
+    document.getElementById("first-name").textContent = params.get("first-name") || "N/A";
+    document.getElementById("last-name").textContent = params.get("last-name") || "N/A";
+    document.getElementById("title").textContent = params.get("title") || "N/A";
+    document.getElementById("email").textContent = params.get("email") || "N/A";
+    document.getElementById("phone").textContent = params.get("phone") || "N/A";
+    document.getElementById("organization").textContent = params.get("organization") || "N/A";
+    document.getElementById("description").textContent = params.get("description") || "N/A";
+    document.getElementById("membershipLevel").textContent = params.get("membershipLevel") || "N/A";
+    document.getElementById("timestamp").textContent = new Date().toLocaleString();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const membershipForm = document.getElementById('membershipForm');
+
+    membershipForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the form from refreshing the page
+
+        // Collect form data
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const title = document.getElementById('title').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const organization = document.getElementById('organization').value;
+        const description = document.getElementById('description').value;
+        const membershipLevel = document.querySelector('input[name="membership-level"]:checked').value;
+        const timestamp = new Date().toISOString();
+
+        // Create query string
+        const queryParams = new URLSearchParams({
+            'first-name': firstName,
+            'last-name': lastName,
+            'title': title,
+            'email': email,
+            'phone': phone,
+            'organization': organization,
+            'description': description,
+            'membership-level': membershipLevel,
+            'timestamp': timestamp
+        }).toString();
+
+        // Redirect to the thank you page with query parameters
+        window.location.href = `thankyou.html?${queryParams}`;
+    });
+});
+
+// Attach modal functionality
+document.querySelectorAll(".membership-card").forEach(card => {
+    const modal = card.querySelector("dialog.modal");
+    const openButton = card.querySelector(".open-modal");
+    const closeButton = modal.querySelector(".close-modal");
+  
+    openButton.addEventListener("click", () => modal.showModal());
+    closeButton.addEventListener("click", () => modal.close());
+  });
+  
