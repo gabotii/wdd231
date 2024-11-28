@@ -72,6 +72,16 @@ header {
     margin-left: auto;
 }
 
+body.dark-mode .menuLinks {
+    background-color: #333; /* Dark background for the menu */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border-radius: 8px; /* Optional: Rounded corners for the menu */
+}
+
+body.dark-mode .menuLinks li {
+    margin: 5px 0; /* Optional: Spacing between menu items */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
