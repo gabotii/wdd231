@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Santiago and its attractions">
+    <meta name="author" content="Gabriel Torrejon">
+    <title>Chamber of Commerce Discover Page</title>
+
+    <meta property="og:title" content="Santiago Chamber of Commerce Discover Page" >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gabotii.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://gabotii.github.io/wdd231/chamber/discover.html">
+    <meta property="og:description" content="Discover Santiago and its attractions in our comprehensive Chamber of Commerce.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Business Directory | Chamber of Commerce">
+    <meta name="twitter:description" content="Explore local businesses in our comprehensive Chamber of Commerce Directory.">
+    <meta name="twitter:image" content="https://gabotii.github.io/wdd231/chamber/images/twitter-icon.svg" >
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="nav-wrapper">
+            <div class="logo-title">
+                <img src="images/logo.webp" alt="Chamber of Commerce Logo" class="logo">
+                <h1>Santiago<span>Chamber of Commerce</span></h1>
+            </div>
+            <div class="nav-controls">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="discover.html" class="active">Discover</a></li>
+                    </ul>
+                </nav>
+                <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
+                <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+    
+     <!-- Main Content -->
+     <main class="discover-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Welcome Message Section -->
+            <div id="visitMessage">
+                <h2>Welcome!</h2>
+                <p>Explore the latest attractions and insights about our community.</p>
+            </div>
+    
+            <!-- Upcoming Events Section -->
+            <section>
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>Annual Fair - Dec 15</li>
+                    <li>New Year Gala - Jan 1</li>
+                    <li>National Holidays - sep 18</li>
+                </ul>
+            </section>
+    
+            <!-- Demographics Section -->
+            <section>
+                <h2>Community Insights</h2>
+                <p><strong>Population:</strong> 50,000</p>
+                <p><strong>Median Age:</strong> 34</p>
+                <p><strong>Languages:</strong> English, Spanish</p>
+            </section>
+    
+            <!-- Local Attractions Section -->
+            <section>
+                <h2>Local Attractions</h2>
+                <ul>
+                    <li><a href="#park">Sunrise Park</a></li>
+                    <li><a href="#museum">City History Museum</a></li>
+                    <li><a href="#theater">Grand Theater</a></li>
+                </ul>
+            </section>
+    
+            <!-- Calendar Section -->
+            <section class="calendar">
+                <h2>Community Calendar</h2>
+                <!-- Example Google Calendar Embed -->
+                <iframe src="https://calendar.google.com/calendar/embed?src=es.cl%23holiday%40group.v.calendar.google.com&ctz=America%2FSantiago" 
+                        class="calendar-iframe" 
+                        aria-hidden="true"></iframe>
+            </section>
+        </aside>
+
+        <!-- Main Content Area -->
+        <section class="photo-gallery">
+            <h2>Discover Santiago</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/santiago1.webp" alt="Plaza de Armas" loading="lazy">
+                    <figcaption>Plaza de Armas</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/santiago2.webp" alt="Cerro San Cristóbal" loading="lazy">
+                    <figcaption>Cerro San Cristóbal</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/santiago3.webp" alt="La Moneda Palace" loading="lazy">
+                    <figcaption>La Moneda Palace</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/santiago4.webp" alt="Bellavista" loading="lazy">
+                    <figcaption>Bellavista</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/santiago5.webp" alt="Parque Bicentenario" loading="lazy">
+                    <figcaption>Parque Bicentenario</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/santiago6.webp" alt="Costanera Center" loading="lazy">
+                    <figcaption>Costanera Center</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>Santiago Chamber of Commerce</p>
+            <p>10 Avenida Libertador Bernardo O'Higgins, Santiago, Chile</p>
+            <p>Email: info@Santiago.org | Phone: +56 2 555 2300</p>        
+        </div>
+        <div class="social-links">
+            <a href="#" aria-label="YouTube"><img src="images/youtube-icon.svg" alt="Follow us on YouTube" width="24" loading="lazy"></a>
+            <a href="#" aria-label="Twitter"><img src="images/twitter-icon.svg" alt="Follow us on Twitter" width="24" loading="lazy"></a>
+            <a href="#" aria-label="Twitter"><img src="images/instagram-icon.svg" alt="Follow us on Instagram" width="24" loading="lazy"></a>
+            <a href="#" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="Follow us on LinkedIn" width="24" loading="lazy"></a>
+        </div>
+       <div class="footer-credits">
+            <p>&copy; <span id="year"></span> Santiago Chamber of Commerce</p>
+            <p>Gabriel Torrejon | WDD 231</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
