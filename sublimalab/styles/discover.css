@@ -1,0 +1,248 @@
+/* General Resets and Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--card-background);
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--button-text);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title .logo {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.nav-controls nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-controls nav ul li a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-controls nav ul li a:hover,
+.nav-controls nav ul li a.active {
+    background-color: #004080;
+    color: #fff;
+}
+
+button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Main Layout */
+main.discover-layout {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    color: #003670;
+    margin-bottom: 15px;
+}
+
+.sidebar section {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 8px;
+}
+
+/* Calendar iframe styling */
+.sidebar .calendar iframe {
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px; 
+}
+
+.calendar iframe {
+    width: 100%; 
+    max-width: 100%; 
+    height: 100%; 
+    border-radius: 8px; 
+    border: 0; 
+    display: block; 
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+/* Main Content Area */
+.photo-gallery {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.photo-gallery h2 {
+    color: #003670;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery figure {
+    text-align: center;
+}
+
+.gallery figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+    padding: 1rem;
+    margin-top: 1rem;
+    min-height: 100px; 
+       
+  }
+     
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-content .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  .footer-content .social-links img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.5rem;
+  }
+
+.social-links a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.footer-credits {
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .nav-controls nav ul {
+        flex-wrap: wrap;
+    }
+
+    main.discover-layout {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Stack sidebar and main content vertically */
+    .discover-layout {
+        flex-direction: column;
+    }
+
+    .photo-gallery h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* Single-column layout on smaller screens */
+    }
+    .calendar iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+    }
+    .gallery img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    }
+    .calendar iframe {
+        height: 400px; /* Increase height for larger screens */
+    }
+}

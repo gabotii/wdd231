@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Sublima Lab's customizable products and personalized printing services. Create unique gifts and promotional items with ease.">
+    <meta name="author" content="Gabriel Torrejon">
+    <title>Sublima Lab Chamber of Commerce Business Directory</title>
+
+    <meta property="og:title" content="Sublima Lab Chamber of Commerce Page" >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gabotii.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://gabotii.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Explore Sublima Lab's engaging platform for creating personalized products and connecting with local businesses." >
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sublima Lab Chamber of Commerce" >
+    <meta name="twitter:description" content="Create unique designs and connect with local businesses through Sublima Lab." >
+    <meta name="twitter:image" content="https://gabotii.github.io/wdd231/chamber/images/twitter-icon.svg" >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/chamber.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <div class="nav-wrapper">
+            <div class="logo-title">
+                <img src="images/logo.webp" alt="Chamber of Commerce Logo" class="logo">
+                <h1>Sublima Lab<span>Chamber of Commerce</span></h1>
+            </div>
+            <div class="nav-controls">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                    </ul>
+                </nav>
+                <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
+                <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 400px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 800px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.webp" alt="Chamber Hero" class="hero-image">
+            </picture>
+            <a href="#" class="keynote-button">Keynote Tickets</a>
+        </div>
+    
+        <h1>Home</h1>
+    
+        <div class="info-grid">
+            <section class="events">
+                <h2>Events</h2>
+                <div class="events-content">
+                    <!-- Events content here -->
+                </div>
+            </section>
+    
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+                <div class="weather-content">
+                    <img id="weather-icon" src="#" alt="current-weather Icon" class="weather-icon">
+                    <div class="weather-info">
+                        <p id="temperature" class="temperature"></p>
+                        <p id="condition" class="condition"></p>
+                        <div class="weather-details">
+                            <p id="high-low"></p>
+                            <p id="humidity"></p>
+                            <p id="wind-speed"></p>
+                            <p id="sunrise"></p>
+                            <p id="sunset"></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+    
+            <section class="weather-forecast">
+                <h2>Weather Forecast</h2>
+                <div id="forecast-content" class="forecast-content">
+                    <!-- Forecast data will be inserted here by JavaScript -->
+                </div>
+            </section>
+        </div>
+    
+        <div class="business-grid" id="spotlightSection">            
+            <!-- Spotlight cards will be dynamically inserted here -->
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>Sublima Lab Chamber of Commerce</p>
+                <p>10 Avenida Libertador Bernardo O'Higgins, Santiago, Chile</p>
+                <p>Email: info@Sublima Lab.org | Phone: +56 2 555 2300</p>        
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="YouTube"><img src="images/youtube-icon.svg" alt="YouTube" width="24" loading="lazy"></a>
+                <a href="#" aria-label="Twitter"><img src="images/twitter-icon.svg" alt="Twitter" width="24" loading="lazy"></a>
+                <a href="#" aria-label="Twitter"><img src="images/instagram-icon.svg" alt="Instagram" width="24" loading="lazy"></a>
+                <a href="#" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="LinkedIn" width="24" loading="lazy"></a>
+            </div>
+           <div class="footer-credits">
+                <p>&copy; <span id="year"></span> Sublima Lab Chamber of Commerce</p>
+                <p>Gabriel Torrejon | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
